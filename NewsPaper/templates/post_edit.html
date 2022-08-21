@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+
+
+{% block content %}
+<h3> Страница создания и редактирования поста </h3>
+<hr>
+
+<form align="left" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input align="left" type="submit" value="Опубликовать" />
+</form>
+
+{% endblock content %}

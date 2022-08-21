@@ -1,0 +1,62 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+    Search
+{% endblock title %}
+
+{% block content %}
+   <form align='' action="" method="get">
+       <p>{{ filterset.form.as_p }}</p>
+       <input type="submit" value="Найти">
+   </form>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+    <h6 align='right'>Найдено новостей на странице: {{search|length}}</h6>
+    <h2>По Вашему запросу найдены новости:</h2>
+    <hr>
+
+    {% if search %}
+        <table align='center' border="0" cellspacing="0">
+           {% for s in search %}
+                <tr align="left">
+                    <td> <a href="{{ s.get_absolute_url }}"> {{ s.post_title|makegoodwords}} </a></td>
+                    <td>{{ s.post_create_datetime|date:'d M Y' }}</td>
+<!--                    <td>{{ new.post_text}}</td>-->
+                    <td>{{ s.post_text|truncatechars:20|makegoodwords }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    {% else %}
+        <h3>По Вашему запросу не найдено ни одной новости!</h3>
+
+    {% endif %}
+
+
+
+    <hr>
+   {% if page_obj.has_previous %}
+       <a href="?page=1">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+           ...
+           <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+
+
+   {{ page_obj.number }}
+
+   {% if page_obj.has_next %}
+       <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           ...
+           <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+       {% endif %}
+   {% endif %}
+{% endblock content %}
+
+
+

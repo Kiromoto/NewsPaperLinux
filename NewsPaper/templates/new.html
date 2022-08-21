@@ -1,0 +1,59 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+{{ new }}
+{% endblock title %}
+
+{% block content %}
+<p>&nbsp;</p>
+<h3 align="center">{{ new.post_title|makegoodwords }}</h3>
+<hr>
+<p>
+    <a href="{% url 'new_edit' new.pk %}" style='...'><u style="font-size: 1.2em;">Редактировать пост</u></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    <a href="{% url 'new_delete' new.pk %}" style='...'><u style="font-size: 1.2em;">Удалить пост</u></a>
+</p>
+
+
+<!--<blockquote>-->
+    <p style="font-size: 1.2em; text-align: justify;">{{ new.post_text|makegoodwords }}</p>
+<!--</blockquote>-->
+
+<p>&nbsp;</p>
+<p style="font-size: 1.2em;" align="right">{{ new.post_create_datetime|date:'d M Y' }}</p>
+
+
+
+<table align='left' border="0" cellspacing="0" style="font-size: 1.2em;">
+    <tr align="left">
+        <td>Категории в статье:</td>
+            {% for cat in new.post_category.all %}
+                 <td ><a href="{% url 'category_search' cat.id %}"><u>{{ cat.name }}</u></a>&nbsp;</td>
+            {% endfor %}
+    </tr>
+</table>
+
+<p><strong>&nbsp; &nbsp;</strong></p>
+<hr>
+<p align='left' border="0" cellspacing="0" style="font-size: 1.2em;">Вы можете подписаться на категорию и получать уведомления на почту о новых публикациях по выбранной категории! Ищите кнопки ниже.</p>
+
+<!--<p><strong>&nbsp;</strong></p>-->
+
+<table align='left' border="0" cellspacing="0" style="font-size: 1.2em;">
+    <tr align="right">
+        <form align="center">
+            {% for cat in new.post_category.all %}
+               <button> <a href="{% url 'subscr_me' cat.id %}">Подписаться на {{ cat.name }}</a> </button>&nbsp; &nbsp;
+            {% endfor %}
+        </form>
+    </tr>
+
+</table>
+
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+
+
+{% endblock content %}
