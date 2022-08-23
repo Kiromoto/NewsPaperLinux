@@ -33,7 +33,7 @@ def postcategory_create(sender, instance, action, **kwargs):
                                      )
 
         msg.attach_alternative(html_content, 'text/html')
-        msg.send()
+        # msg.send()
     finally:
         print(recipient_email_list)
 

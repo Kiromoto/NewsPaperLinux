@@ -62,6 +62,7 @@ class Post(models.Model):
     post_text = models.TextField()
     post_rating = models.IntegerField(default=0)
     is_updated = models.BooleanField(default=False)
+    is_new = models.BooleanField(default=True)
 
     def like(self):
         self.post_rating += 1

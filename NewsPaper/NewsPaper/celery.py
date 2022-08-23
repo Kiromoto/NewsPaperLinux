@@ -10,13 +10,13 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()
 
 app.conf.beat_schedule = {
-    'send_newsmail_every_monday_8am': {
+    'send_weekly_mails_every_monday_8am': {
         'task': 'news.tasks.weekly_mails',
-        'schedule': crontab(hour=0, minute=20, day_of_week='monday'),
+        'schedule': crontab(hour='8', minute='0', day_of_week='monday'),
     },
 
-#     'send_newsmail_every_2min': {
-#         'task': 'news.tasks.weekly_mails',
-#         'schedule': crontab(minute='*/2'),
-#     },
+    'send_mail_when_post_create()': {
+        'task': 'news.tasks.mail_send_post_create',
+        'schedule': crontab(),
+    },
 }

@@ -22,7 +22,6 @@ class PostDetail(DetailView):
     template_name = 'new.html'
     context_object_name = 'new'
 
-
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
     #     id = self.kwargs.get('pk')
@@ -31,11 +30,6 @@ class PostDetail(DetailView):
     #     context['is_subscribe'] = qwe.filter(subscriber__username=self.request.user).exists()
     #     return context
 
-# def add_subscribe(request, **kwargs):
-#     pk = request.GET.get('pk',)
-#     print('Пользователь', request.user, 'добавлен в подписчики:', Category.objects.get(pk=pk))
-#     Category.objects.get(pk=pk).subscriber.add(request.user)
-#     return redirect('/news/')
 
 @login_required
 def subscribe_me(request, pk):
@@ -69,8 +63,6 @@ def subscribe_me(request, pk):
 #     return redirect('/news/')
 
 
-
-
 class PostSearch(ListView):
     model = Post
     ordering = '-post_create_datetime'
@@ -94,6 +86,12 @@ class PostCreate(PermissionRequiredMixin, CreateView):
     form_class = PostForm
     model = Post
     template_name = 'post_edit.html'
+
+    # def post(self, request):
+    #     title = request.POST.get('post_title')
+    #     p = request.POST.get('pk')
+    #     print(f'{title}. ID поста = {p}')
+    #     return redirect(f'/news/')
 
 
 class PostEdit(PermissionRequiredMixin, UpdateView):
