@@ -7,6 +7,10 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.shortcuts import redirect
+from django.core.cache import cache
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class PostList(ListView):
@@ -22,14 +26,31 @@ class PostDetail(DetailView):
     template_name = 'new.html'
     context_object_name = 'new'
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     id = self.kwargs.get('pk')
+    def get_object(self, *args, **kwargs):
+        obj = cache.get(f'post-{self.kwargs["pk"]}', None)
+
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'post-{self.kwargs["pk"]}', obj)
+
+        return obj
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        id = self.kwargs.get('pk')
+        # context['is_subscribe'] = True
+        # print(Post.objects.get(id=id).post_title)
     #     qwe = Category.objects.filter(pk=Post.objects.get(pk=id).post_category.id).values('subscriber__username')
     #     context['is_not_subscribe'] = not qwe.filter(subscriber__username=self.request.user).exists()
     #     context['is_subscribe'] = qwe.filter(subscriber__username=self.request.user).exists()
-    #     return context
+        return context
 
+
+# def add_subscribe(request, **kwargs):
+#     pk = request.GET.get('pk',)
+#     print('Пользователь', request.user, 'добавлен в подписчики:', Category.objects.get(pk=pk))
+#     Category.objects.get(pk=pk).subscriber.add(request.user)
+#     return redirect('/news/')
 
 @login_required
 def subscribe_me(request, pk):
@@ -44,6 +65,20 @@ def subscribe_me(request, pk):
 
     return redirect('/')
 
+@login_required
+def unsubscribe_me(request, **kwargs):
+    user = request.user
+    pk = kwargs.get('pk',)
+    print(f'kwargs.get("pk",)= {pk}')
+    print(f'{user} и его ID: {user.id}')
+        # print('Пользователь', user, 'отписан от категории:', Category.objects.get(pk=pk))
+        # Category.objects.get(pk=pk).subscriber.add(user)
+        # category_for_this_user = CategorySubscriber.objects.filter(subscriber_user=user.id).values('category_name')
+        # for i in category_for_this_user:
+        #     n = i['category_name']
+        #     print(f'{n} - {Category.objects.get(pk=n)}')
+
+    return redirect('/')
 
     # pk = request.GET.get('pk', )
     # print('Пользователю', request.user, 'добавлена категория в подписки:', Category.objects.get(pk=pk))
@@ -87,12 +122,6 @@ class PostCreate(PermissionRequiredMixin, CreateView):
     model = Post
     template_name = 'post_edit.html'
 
-    # def post(self, request):
-    #     title = request.POST.get('post_title')
-    #     p = request.POST.get('pk')
-    #     print(f'{title}. ID поста = {p}')
-    #     return redirect(f'/news/')
-
 
 class PostEdit(PermissionRequiredMixin, UpdateView):
     permission_required = ('news.change_post')
@@ -106,10 +135,4 @@ class PostDelete(PermissionRequiredMixin, DeleteView):
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('news_list')
-
-
-def SubscriberNotificationMail(a):
-    print(f'VIEWS.PY SubscriberNotificationMail + {a}')
-    pass
-
 

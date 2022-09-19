@@ -1,6 +1,6 @@
 from django import template
 from flashtext import KeywordProcessor
-from news.badwords import OBSCENE_WORDS
+from news.templatetags.badwords import OBSCENE_WORDS
 
 
 register = template.Library()

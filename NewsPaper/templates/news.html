@@ -1,10 +1,15 @@
 {% extends 'flatpages/default.html' %}
 
+{% load i18n %}
 {% load custom_filters %}
 
+{% load cache %}
+
+{% cache 30 title %}
 {% block title %}
     News
 {% endblock title %}
+{% endcache %}
 
 {% block content %}
     <p>&nbsp;</p>
@@ -49,5 +54,8 @@
            <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
        {% endif %}
    {% endif %}
+
+    <p><strong>&nbsp;</strong></p>
+    {% trans "Check out my new cool translation" %}
 
 {% endblock content %}

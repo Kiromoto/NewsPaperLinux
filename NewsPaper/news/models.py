@@ -1,11 +1,10 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
+from django.utils.translation import gettext as _
+from django.utils.translation import pgettext_lazy
 
 
-# ______________________________________________________________________________________________________________________
-# ______________________________________________________________________________________________________________________
-# Код итогового задания
 class Author(models.Model):
     author_user = models.OneToOneField(User, on_delete=models.CASCADE)
     author_rating = models.IntegerField(default=0)
@@ -35,15 +34,20 @@ class Author(models.Model):
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=64, unique=True)
+    name = models.CharField(max_length=64, unique=True, help_text=_('category name'))
     subscriber = models.ManyToManyField(User, through='CategorySubscriber', blank=True)
+
+    def get_subscribers(self):
+        return ';\n'.join([s.username for s in self.subscriber.all()])
 
     def __str__(self):
         return self.name
 
+
 class CategorySubscriber(models.Model):
     subscriber_user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     category_name = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
+
 
 class Post(models.Model):
     NEWS = 'NW'
@@ -57,12 +61,15 @@ class Post(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     type_of_post = models.CharField(max_length=2, default=NEWS, choices=CHOISE_NW_AT)
     post_create_datetime = models.DateTimeField(auto_now_add=True)
-    post_category = models.ManyToManyField(Category, through='PostCategory', related_name='posts')
+    post_category = models.ManyToManyField(Category, through='PostCategory', related_name='posts', verbose_name=pgettext_lazy('This is the help text'))
     post_title = models.CharField(max_length=128)
     post_text = models.TextField()
     post_rating = models.IntegerField(default=0)
     is_updated = models.BooleanField(default=False)
     is_new = models.BooleanField(default=True)
+
+    def get_category(self):
+        return '\n'.join([c.name for c in self.post_category.all()])
 
     def like(self):
         self.post_rating += 1

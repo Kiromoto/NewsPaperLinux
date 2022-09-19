@@ -8,7 +8,8 @@ from django.core.mail import EmailMultiAlternatives, send_mail
 @receiver(m2m_changed, sender=PostCategory)
 def postcategory_create(sender, instance, action, **kwargs):
 
-    recipient_email_list = ['kiromotossindzi@gmail.com', ]
+    # recipient_email_list = ['kiromotossindzi@gmail.com', ]
+    recipient_email_list = []
 
     try:
         cat = PostCategory.objects.filter(post_id=instance.id).values('category_id')
@@ -33,7 +34,7 @@ def postcategory_create(sender, instance, action, **kwargs):
                                      )
 
         msg.attach_alternative(html_content, 'text/html')
-        # msg.send()
+        msg.send()
     finally:
-        print(recipient_email_list)
+        print(f'Print from signals.py: {recipient_email_list}')
 

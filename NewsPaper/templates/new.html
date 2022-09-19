@@ -1,10 +1,12 @@
 {% extends 'flatpages/default.html' %}
 
+{% load i18n %}
 {% load custom_filters %}
 
 {% block title %}
 {{ new }}
 {% endblock title %}
+
 
 {% block content %}
 <p>&nbsp;</p>
@@ -44,7 +46,10 @@
     <tr align="right">
         <form align="center">
             {% for cat in new.post_category.all %}
-               <button> <a href="{% url 'subscr_me' cat.id %}">Подписаться на {{ cat.name }}</a> </button>&nbsp; &nbsp;
+                {% if is_subscribe %}
+                    <button> <a href="{% url 'subscr_me' cat.id %}">Отписаться от {{ cat.name }}</a> </button>
+            &nbsp;   {% else %}
+                    <button> <a href="{% url 'subscr_me' cat.id %}">Подписаться на {{ cat.name }}</a> </button>                {% endif %}&nbsp;
             {% endfor %}
         </form>
     </tr>
@@ -54,6 +59,5 @@
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
-
 
 {% endblock content %}

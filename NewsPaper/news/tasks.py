@@ -7,7 +7,7 @@ from celery import shared_task
 
 @shared_task
 def weekly_mails():
-    print('Print from TASKS.py every 20 seconds! weekly_mails')
+    # print('Print from TASKS.py every 20 seconds! weekly_mails')
     try:
         for user_one in User.objects.all():
             user_cat = []
@@ -48,44 +48,34 @@ def weekly_mails():
     except Exception as e:
         print(f'Ошибка получения данных из db. {e}')
 
-
-
-@shared_task
 def mail_send_post_create():
+    # recipient_email_list = ['kiromotossindzi@gmail.com', ]
     recipient_email_list = []
+
     try:
-        new_posts = Post.objects.filter(is_new=1)
-        for p in new_posts:
-            p.is_new = False
-            p.save()
-            recipient_email_list = []
-            s = PostCategory.objects.filter(post_id=p.id).values('category_id')
-            if s:
-                for si in s:
-                    idcat = si["category_id"]
-                    y1 = CategorySubscriber.objects.filter(category_name=idcat).values('subscriber_user')
-                    if y1:
-                        for el in y1:
-                            u = User.objects.get(id=el['subscriber_user'])
-                            if u.email and u.email not in recipient_email_list:
-                                recipient_email_list.append(u.email)
+        cat = PostCategory.objects.filter(post_id=instance.id).values('category_id')
+        idcat = cat[0]["category_id"]
+        namecat = Category.objects.filter(postcategory__post_id=instance.id)
+        y1 = CategorySubscriber.objects.filter(category_name=idcat)
+        if y1:
+            for el in y1:
+                u = User.objects.get(id=el.subscriber_user_id)
+                if u.email and u.email not in recipient_email_list:
+                    recipient_email_list.append(u.email)
+    except Exception:
+        print('Ошибка получения данных о категории')
+    else:
+        subject = f'Опубликована новая статья в вашей любимой категории "{namecat[0].name}" на NewsPaper.'
+        ur = f'http://127.0.0.1:8000{instance.get_absolute_url()}'
+        html_content = render_to_string('post_emailsend.html', {'post': instance, 'ur': ur, })
+        msg = EmailMultiAlternatives(subject=subject,
+                                     body=instance.post_text[:20],
+                                     from_email='tlfordjango@mail.ru',
+                                     to=recipient_email_list,
+                                     )
 
-                    if recipient_email_list:
-                        subject = f'Опубликована новая статья в вашей любимой категории "{Category.objects.get(id=idcat).name}" на NewsPaper.'
-                        ur = f'http://127.0.0.1:8000{p.get_absolute_url()}'
-                        html_content = render_to_string('post_emailsend.html', {'post': p, 'ur': ur, })
-                        print(recipient_email_list)
-                        msg = EmailMultiAlternatives(subject=subject,
-                                                         body=p.post_text[:20],
-                                                         from_email='tlfordjango@mail.ru',
-                                                         to=recipient_email_list,
-                                                         )
+        msg.attach_alternative(html_content, 'text/html')
+        msg.send()
+    finally:
+        print(f'Print from tasks.py: {recipient_email_list}')
 
-                        msg.attach_alternative(html_content, 'text/html')
-                        try:
-                            msg.send()
-                        except Exception as e:
-                            print(f'Ошибка отправки письма с новостью. Код - {e}')
-
-    except Exception as e:
-        print(f'Ошибка получения данных о категории: {e}')

@@ -9,7 +9,7 @@ class FlatPageAdmin(FlatPageAdmin):
     fieldsets = (
         (None, {'fields': ('url', 'title', 'content', 'sites')}),
         (_('Advanced options'), {
-            'classes': ('collapse',),
+            'classes': _('collapse',),
             'fields': (
                 'enable_comments',
                 'registration_required',
