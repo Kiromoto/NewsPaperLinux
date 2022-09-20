@@ -1,6 +1,6 @@
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .models import Post, CategorySubscriber, PostCategory, Category
+from .models import Post, CategorySubscriber, Category
 from .filters import PostFilter
 from .forms import PostForm
 from django.contrib.auth.mixins import PermissionRequiredMixin
@@ -117,7 +117,7 @@ class PostSearch(ListView):
 
 
 class PostCreate(PermissionRequiredMixin, CreateView):
-    permission_required = ('news.add_post',)
+    permission_required = ('news.add_post')
     form_class = PostForm
     model = Post
     template_name = 'post_edit.html'

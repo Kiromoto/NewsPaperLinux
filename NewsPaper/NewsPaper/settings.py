@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 import os
 
 from pathlib import Path
+from django.utils.translation import gettext_lazy as _
 
 load_dotenv()
 env_path = Path('.') / '.env'
@@ -158,6 +159,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'ru'
 
+LANGUAGES = [
+    ('en', _('English')),
+    ('ru',_('Russian')),
+]
 
 TIME_ZONE = 'UTC'
 # TIME_ZONE = datetime.timezone(datetime.timedelta(hours=3))
