@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-20 01:21+0000\n"
+"POT-Creation-Date: 2022-09-22 03:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,14 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-
-#: NewsPaper/settings.py:163
-msgid "English"
-msgstr ""
-
-#: NewsPaper/settings.py:164
-msgid "Russian"
-msgstr ""
 
 #: fpages/admin.py:11
 msgid "Advanced options"
@@ -40,6 +32,11 @@ msgstr "свернуть"
 msgid "category name"
 msgstr "Название категории"
 
+#: news/models.py:64
+msgctxt "This is category of post"
+msgid "This is category of post"
+msgstr "Категория поста"
+
 #: templates/news.html:59
 msgid "Check out my new cool translation"
-msgstr "Оцени мой новый классный перевод!"
+msgstr "Оцените мой новый классный перевод"

@@ -1161,3 +1161,243 @@ Traceback (most recent call last):
     res = func(*self.__args, **self.__kw)
 TypeError: pgettext() missing 1 required positional argument: 'message'
 2022-09-21 04:33:53,052 ERROR "GET /news/create/ HTTP/1.1" 500 244594 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-22 02:03:13,874 ERROR Internal Server Error: /news/create/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'TypeError'>, TypeError("pgettext() missing 1 required positional argument: 'message'"), <traceback object at 0x7fc64029c740>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 712, in resolve
+    obj = self.var.resolve(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 909, in _resolve_lookup
+    current = current()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/forms/utils.py", line 66, in as_p
+    return self.render(self.template_name_p)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/forms/utils.py", line 53, in render
+    (renderer or self.renderer).render(
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/forms/renderers.py", line 23, in render
+    return template.render(context, request=request).strip()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    if match:
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/functional.py", line 141, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/text.py", line 18, in capfirst
+    if not x:
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/functional.py", line 141, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+TypeError: pgettext() missing 1 required positional argument: 'message'
+2022-09-22 02:03:13,876 ERROR "GET /news/create/ HTTP/1.1" 500 244727 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-22 02:03:46,990 ERROR Internal Server Error: /news/create/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'TypeError'>, TypeError("pgettext() missing 1 required positional argument: 'message'"), <traceback object at 0x7fc64042e5c0>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 712, in resolve
+    obj = self.var.resolve(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 909, in _resolve_lookup
+    current = current()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/forms/utils.py", line 66, in as_p
+    return self.render(self.template_name_p)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/forms/utils.py", line 53, in render
+    (renderer or self.renderer).render(
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/forms/renderers.py", line 23, in render
+    return template.render(context, request=request).strip()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    if match:
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/functional.py", line 141, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/text.py", line 18, in capfirst
+    if not x:
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/functional.py", line 141, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+TypeError: pgettext() missing 1 required positional argument: 'message'
+2022-09-22 02:03:46,991 ERROR "GET /news/create/ HTTP/1.1" 500 244748 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-22 03:21:24,808 ERROR Internal Server Error: /news/create/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'TypeError'>, TypeError("pgettext() missing 1 required positional argument: 'message'"), <traceback object at 0x7f6282d24f00>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 712, in resolve
+    obj = self.var.resolve(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 909, in _resolve_lookup
+    current = current()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/forms/utils.py", line 66, in as_p
+    return self.render(self.template_name_p)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/forms/utils.py", line 53, in render
+    (renderer or self.renderer).render(
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/forms/renderers.py", line 23, in render
+    return template.render(context, request=request).strip()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    if match:
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/functional.py", line 141, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/text.py", line 18, in capfirst
+    if not x:
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/functional.py", line 141, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+TypeError: pgettext() missing 1 required positional argument: 'message'
+2022-09-22 03:21:24,809 ERROR "GET /news/create/ HTTP/1.1" 500 244732 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
