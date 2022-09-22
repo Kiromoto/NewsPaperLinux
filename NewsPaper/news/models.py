@@ -6,8 +6,16 @@ from django.utils.translation import pgettext_lazy
 
 
 class Author(models.Model):
-    author_user = models.OneToOneField(User, on_delete=models.CASCADE)
-    author_rating = models.IntegerField(default=0)
+    author_user = models.OneToOneField(
+        User, on_delete=models.CASCADE,
+        verbose_name=pgettext_lazy('Author name', 'Author name'),
+        help_text=_('Author name')
+    )
+    author_rating = models.IntegerField(
+        default=0,
+        verbose_name=pgettext_lazy('Author rating', 'Author rating'),
+        help_text=_('Author rating')
+    )
 
     def update_rating(self):
         # суммарный рейтинг каждой статьи автора умножается на 3;
@@ -34,8 +42,18 @@ class Author(models.Model):
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=64, unique=True, help_text=_('category name'))
-    subscriber = models.ManyToManyField(User, through='CategorySubscriber', blank=True)
+    name = models.CharField(
+        max_length=64,
+        unique=True,
+        verbose_name=pgettext_lazy('Name of category', 'Name of category'),
+        help_text=_('category name')
+    )
+    subscriber = models.ManyToManyField(
+        User, through='CategorySubscriber',
+        blank=True,
+        verbose_name=pgettext_lazy('Subscribers', 'Subscribers'),
+        help_text=_('subscribers')
+    )
 
     def get_subscribers(self):
         return ';\n'.join([s.username for s in self.subscriber.all()])
@@ -45,8 +63,17 @@ class Category(models.Model):
 
 
 class CategorySubscriber(models.Model):
-    subscriber_user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
-    category_name = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
+    subscriber_user = models.ForeignKey(
+        User, on_delete=models.CASCADE,
+        blank=True, null=True,
+        help_text=_('subscriber')
+    )
+    category_name = models.ForeignKey(
+        Category, on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        help_text=_('category name')
+    )
 
 
 class Post(models.Model):
@@ -58,15 +85,50 @@ class Post(models.Model):
         (ARTICLE, 'Статья')
     ]
 
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    type_of_post = models.CharField(max_length=2, default=NEWS, choices=CHOISE_NW_AT)
-    post_create_datetime = models.DateTimeField(auto_now_add=True)
-    post_category = models.ManyToManyField(Category, through='PostCategory', related_name='posts', verbose_name=pgettext_lazy('This is category of post', 'This is category of post'))
-    post_title = models.CharField(max_length=128)
-    post_text = models.TextField()
-    post_rating = models.IntegerField(default=0)
-    is_updated = models.BooleanField(default=False)
-    is_new = models.BooleanField(default=True)
+    author = models.ForeignKey(
+        Author, on_delete=models.CASCADE,
+        verbose_name=pgettext_lazy('Author name', 'Author name'),
+        help_text=_('Author name')
+    )
+    type_of_post = models.CharField(
+        max_length=2,
+        default=NEWS,
+        choices=CHOISE_NW_AT,
+        verbose_name=pgettext_lazy('Post type', 'Post type'),
+        help_text=_('Post type')
+    )
+    post_create_datetime = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=pgettext_lazy('Time and date of publication', 'Time and date of publication'),
+        help_text=_('Time and date of publication')
+    )
+    post_category = models.ManyToManyField(
+        Category, through='PostCategory',
+        related_name='posts',
+        verbose_name=pgettext_lazy('This is category of post', 'Post category'),
+        help_text=_('Post category')
+    )
+    post_title = models.CharField(
+        max_length=128,
+        verbose_name=pgettext_lazy('Post title', 'Post title'),
+        help_text=_('Post title')
+    )
+    post_text = models.TextField(
+        verbose_name=pgettext_lazy('The content of the post', 'The content of the post'),
+        help_text=_('The content of the post')
+    )
+    post_rating = models.IntegerField(
+        default=0,
+        verbose_name=pgettext_lazy('The rating of the post', 'The rating of the post'),
+        help_text=_('The rating of the post')
+    )
+    is_updated = models.BooleanField(
+        default=False
+    )
+    is_new = models.BooleanField(
+        default=True,
+        help_text=_('Is this article new?')
+    )
 
     def get_category(self):
         return '\n'.join([c.name for c in self.post_category.all()])
@@ -90,7 +152,10 @@ class Post(models.Model):
 
 
 class PostCategory(models.Model):
-    post_id = models.ForeignKey(Post, on_delete=models.CASCADE)
+    post_id = models.ForeignKey(
+        Post, on_delete=models.CASCADE,
+        help_text=_('The rating of the post')
+    )
     category_id = models.ForeignKey(Category, on_delete=models.CASCADE)
 
 

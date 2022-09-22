@@ -1401,3 +1401,5 @@ Traceback (most recent call last):
     res = func(*self.__args, **self.__kw)
 TypeError: pgettext() missing 1 required positional argument: 'message'
 2022-09-22 03:21:24,809 ERROR "GET /news/create/ HTTP/1.1" 500 244732 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-22 08:56:39,899 ERROR "GET / HTTP/1.1" 500 59 /home/kiro/NewsPaperLinux/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None
+2022-09-22 08:56:42,279 ERROR "GET /favicon.ico HTTP/1.1" 500 59 /home/kiro/NewsPaperLinux/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py None
