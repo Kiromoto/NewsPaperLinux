@@ -2,48 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="958a852c-66ed-46cf-abc7-647f7b14103e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/3f9e320880abe17d83210a3a355bac7a.djcache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/5553f98e26a3fb1b3d65ea8cf9463deb.djcache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/9187902932b91f0c540505b7954caae9.djcache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/b50aacf0d266d36d3b688c33a2b31891.djcache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/cc2fa0d2035b38244ccfce28bf70edb4.djcache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewsPaper/errors.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewsPaper/general.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewsPaper/locale/ru/LC_MESSAGES/django.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewsPaper/locale/ru/LC_MESSAGES/django.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewsPaper/news/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewsPaper/news/templatetags/badwords.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NewsPaper/security.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/NewsPaper/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/NewsPaper/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/NewsPaper/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/NewsPaper/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/38b348c7af7ef9bf492caa2ab2aa0489.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/38b348c7af7ef9bf492caa2ab2aa0489.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/42969131e8132fb2273b708a9ea82e7c.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/42969131e8132fb2273b708a9ea82e7c.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/5553f98e26a3fb1b3d65ea8cf9463deb.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/5553f98e26a3fb1b3d65ea8cf9463deb.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/b50aacf0d266d36d3b688c33a2b31891.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/b50aacf0d266d36d3b688c33a2b31891.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/fpages/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/fpages/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/news/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/general.log" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/general.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/locale/ru/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/locale/ru/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/news/migrations/0005_post_is_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/migrations/0005_post_is_new.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/news/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/news/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/tasks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/news/templatetags/custom_filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/templatetags/custom_filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/account/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/account/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/account/email/email_confirmation_signup_message.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/account/email/email_confirmation_signup_message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/flatpages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/flatpages/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/flatpages/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/flatpages/default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/post_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/post_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/post_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/post_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/post_emailsend.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/post_emailsend.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/protect/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/protect/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/send_everyweek.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/send_everyweek.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/sign/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/sign/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/sign/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/sign/logout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/sign/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/sign/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/subscribes.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/subscribes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/user_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/user_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +35,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2BzqLySBhIbDxEbQpFlFNwsWkdD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -72,16 +46,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/kiro/code/NewsPaperLinux/NewsPaper",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu-20.04/home/kiro/NewsPaperLinux&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\kiro\code\NewsPaperLinux\NewsPaper" />
