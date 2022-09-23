@@ -153,18 +153,35 @@ class Post(models.Model):
 
 class PostCategory(models.Model):
     post_id = models.ForeignKey(
-        Post, on_delete=models.CASCADE,
-        help_text=_('The rating of the post')
+        Post, on_delete=models.CASCADE
     )
-    category_id = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category_id = models.ForeignKey(
+        Category, on_delete=models.CASCADE
+    )
 
 
 class Comment(models.Model):
-    postComment = models.ForeignKey(Post, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    comment_text = models.TextField()
-    comment_datetime = models.DateTimeField(auto_now_add=True)
-    comment_rating = models.IntegerField(default=0)
+    postComment = models.ForeignKey(
+        Post, on_delete=models.CASCADE,
+        verbose_name=pgettext_lazy('Post comments', 'Post comments'),
+        help_text=_('Post comments')
+    )
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE,
+        verbose_name=pgettext_lazy('The user who commented on the post', 'The user who commented on the post'),
+        help_text=_('The username who commented on the post')
+    )
+    comment_text = models.TextField(verbose_name=pgettext_lazy('Comment text', 'Comment text'))
+    comment_datetime = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=pgettext_lazy('Time and date of comment', 'Time and date of comment'),
+        help_text=_('Time and date of comment')
+    )
+    comment_rating = models.IntegerField(
+        default=0,
+        verbose_name=pgettext_lazy('The rating of the comment', 'The rating of the comment'),
+        help_text=_('The rating of the comment')
+    )
 
     def like(self):
         self.comment_rating += 1

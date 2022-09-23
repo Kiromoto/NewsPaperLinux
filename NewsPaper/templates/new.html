@@ -13,8 +13,8 @@
 <h3 align="center">{{ new.post_title|makegoodwords }}</h3>
 <hr>
 <p>
-    <a href="{% url 'new_edit' new.pk %}" style='...'><u style="font-size: 1.2em;">Редактировать пост</u></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-    <a href="{% url 'new_delete' new.pk %}" style='...'><u style="font-size: 1.2em;">Удалить пост</u></a>
+    <a href="{% url 'new_edit' new.pk %}" style='...'><u style="font-size: 1.2em;">{% trans "Edit post" %}</u></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    <a href="{% url 'new_delete' new.pk %}" style='...'><u style="font-size: 1.2em;">{% trans "Delete post" %}</u></a>
 </p>
 
 
@@ -29,7 +29,7 @@
 
 <table align='left' border="0" cellspacing="0" style="font-size: 1.2em;">
     <tr align="left">
-        <td>Категории в статье:</td>
+        <td>{% trans "Categories in the article:" %}</td>
             {% for cat in new.post_category.all %}
                  <td ><a href="{% url 'category_search' cat.id %}"><u>{{ cat.name }}</u></a>&nbsp;</td>
             {% endfor %}
@@ -38,7 +38,9 @@
 
 <p><strong>&nbsp; &nbsp;</strong></p>
 <hr>
-<p align='left' border="0" cellspacing="0" style="font-size: 1.2em;">Вы можете подписаться на категорию и получать уведомления на почту о новых публикациях по выбранной категории! Ищите кнопки ниже.</p>
+{% trans "You can subscribe to a category and receive email notifications about new publications in the selected category! Look for the buttons below." as youcansubscrib_var %}
+<p align='left' border="0" cellspacing="0" style="font-size: 1.2em;">{{ youcansubscrib_var }}</p>
+<!--Вы можете подписаться на категорию и получать уведомления на почту о новых публикациях по выбранной категории! Ищите кнопки ниже.-->
 
 <!--<p><strong>&nbsp;</strong></p>-->
 
@@ -49,7 +51,7 @@
                 {% if is_subscribe %}
                     <button> <a href="{% url 'subscr_me' cat.id %}">Отписаться от {{ cat.name }}</a> </button>
             &nbsp;   {% else %}
-                    <button> <a href="{% url 'subscr_me' cat.id %}">Подписаться на {{ cat.name }}</a> </button>                {% endif %}&nbsp;
+                    <button> <a href="{% url 'subscr_me' cat.id %}">{% Unsubscribe from %} {{ cat.name }}</a> </button>                {% endif %}&nbsp;
             {% endfor %}
         </form>
     </tr>

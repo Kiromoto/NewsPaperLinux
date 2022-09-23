@@ -4,6 +4,8 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from celery import shared_task
 
+from django.utils.translation import gettext as _
+
 
 @shared_task
 def weekly_mails():
@@ -30,7 +32,7 @@ def weekly_mails():
 
             if user_posts:
                 print(f'У юзера {user_one.username}, e-mail: {user_one.email} насобирались новости на отправку: {user_posts}')
-                subject = f'Здравствуйте, {user_one.username}, вот самые интересные новости за прошлую неделю на NewsPaper.'
+                subject = _('Здравствуйте,') + user_one.username + '.' + _('Here are the most interesting news from the past week on NewsPaper') #вот самые интересные новости за прошлую неделю на NewsPaper
                 ur = []
                 ur.clear()
                 for p in user_posts:
@@ -65,7 +67,8 @@ def mail_send_post_create():
     except Exception:
         print('Ошибка получения данных о категории')
     else:
-        subject = f'Опубликована новая статья в вашей любимой категории "{namecat[0].name}" на NewsPaper.'
+        substr = _('NewsPaper has a new article in your favorite category') #На сайте NewsPaper опубликована новая статья в вашей любимой категории
+        subject = f'{substr} - "{namecat[0].name}".'
         ur = f'http://127.0.0.1:8000{instance.get_absolute_url()}'
         html_content = render_to_string('post_emailsend.html', {'post': instance, 'ur': ur, })
         msg = EmailMultiAlternatives(subject=subject,

@@ -3,27 +3,27 @@
 {% load i18n %}
 
 {% block content %}
-<h2 align="center">Страница авторизованного пользователя</h2>
+<h2 align="center">{% trans "Authorized user page" %}</h2>
 
 <table align='center' border="0" cellspacing="0">
     <tr align="left">
-        <td>Логин пользователя:</td>
+        <td>{% trans "User login:" %}</td>
         <td> {{request.user.username}} </td>
     </tr>
     <tr align="left">
-        <td>Имя пользователя:</td>
+        <td>{% trans "Username:" %}:</td>
         <td> {{request.user.first_name}} </td>
     </tr>
     <tr align="left">
-        <td>Фамилия пользователя:</td>
+        <td>{% trans "Surname:" %}</td>
         <td> {{request.user.last_name}} </td>
     </tr>
     <tr align="left">
-        <td>Почта пользователя:</td>
+        <td>{% trans "E-mail:" %}</td>
         <td> {{request.user.email}} </td>
     </tr>
      <tr align="left">
-        <td>Состоит в группах:</td>
+        <td>{% trans "Member of groups:" %}</td>
          <td>
              {% for g in request.user.groups.all %}
                 "{{ g.name }}"
@@ -31,7 +31,7 @@
          </td>
     </tr>
     <tr align="left">
-        <td>Подписан на категории новостей:</td>
+        <td>{% trans "Subscribed to news categories:" %}</td>
          <td>
 <!--             {{ request.user.categoty_set.all }}-->
              {% for el in request.user.category_set.all %}
@@ -42,18 +42,20 @@
 </table>
 
 &nbsp;
-<div align="center"> Здесь может содержаться персональная информация для каждого пользователя </div>
+<div align="center"> {% trans "This may contain personal information for each user." %} </div>
+<!--Здесь может содержаться персональная информация для каждого пользователя -->
 &nbsp;
-&nbsp;
+{% trans "Edit profile" as edit_prof_var %}
 <form align="center">
-    <button> <a href="{% url 'user_edit' user.pk %}" style='...'>Редактировать профиль</a></button>
+    <button> <a href="{% url 'user_edit' user.pk %}" style='...'>{{ edit_prof_var }}</a></button>
 </form>
 &nbsp;
-&nbsp;
+&nbsp;{% trans "Logout" as logout_var %}
 <form align="center">
-    <button> <a href="accounts/logout/">Выйти</a> </button>
+    <button> <a href="accounts/logout/">{{ logout_var }}</a> </button>
     {% if is_not_author %}
-        <button> <a href="sign/upgrade/"> Стать автором!</a> </button>
+    &nbsp;   {% trans "Become an author" as author_var %}
+        <button> <a href="sign/upgrade/">{{ author_var }}</a> </button>
     {% endif %}
 </form>
 

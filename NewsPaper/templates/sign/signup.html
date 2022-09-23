@@ -3,10 +3,11 @@
 {% load i18n %}
 
 {% block content %}
-<h3> Войти в систему </h3>
+<h3> {% trans "Sign in" %} </h3>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Продолжить">
+    {% trans "Continue" as trans_var %}
+    <input type="submit" value=trans_var>
 </form>
 {% endblock %}

@@ -3,7 +3,7 @@ from django.dispatch import receiver  # импортируем нужный де
 from .models import Category, PostCategory, User, CategorySubscriber
 from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives, send_mail
-
+from django.utils.translation import gettext as _
 
 @receiver(m2m_changed, sender=PostCategory)
 def postcategory_create(sender, instance, action, **kwargs):
@@ -24,7 +24,9 @@ def postcategory_create(sender, instance, action, **kwargs):
     except Exception:
         print('Ошибка получения данных о категории')
     else:
-        subject = f'Опубликована новая статья в вашей любимой категории "{namecat[0].name}" на NewsPaper.'
+        substr = _('NewsPaper has a new article in your favorite category') #На сайте NewsPaper опубликована новая статья в вашей любимой категории
+        subject = f'{substr} - "{namecat[0].name}".'
+        # subject = f'Опубликована новая статья в вашей любимой категории "{namecat[0].name}" на NewsPaper.'
         ur = f'http://127.0.0.1:8000{instance.get_absolute_url()}'
         html_content = render_to_string('post_emailsend.html', {'post': instance, 'ur': ur, })
         msg = EmailMultiAlternatives(subject=subject,

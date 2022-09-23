@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Author, Category, Post, Comment, PostCategory, CategorySubscriber
+from django.utils.translation import pgettext_lazy
 
 
 def nullfy_postrating(modeladmin, request, queryset):
@@ -10,7 +11,7 @@ def nullfy_commentrating(modeladmin, request, queryset):
     queryset.update(comment_rating=0)
 
 
-nullfy_commentrating.short_description = 'Обнулить рейтинг комментария'
+nullfy_commentrating.short_description = pgettext_lazy('Reset comment rating', 'Reset comment rating')
 
 
 class PostAdmin(admin.ModelAdmin):

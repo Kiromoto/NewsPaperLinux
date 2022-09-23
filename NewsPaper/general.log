@@ -159,3 +159,64 @@
 2022-09-22 12:20:52,320 INFO autoreload Watching for file changes with StatReloader
 2022-09-22 12:21:50,524 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
 2022-09-22 12:21:51,782 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 10:52:55,544 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 10:53:40,510 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
+2022-09-23 10:53:41,620 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 10:55:15,482 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
+2022-09-23 10:55:17,017 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 10:55:31,648 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
+2022-09-23 10:55:32,587 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 10:56:20,905 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
+2022-09-23 10:56:22,145 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 10:57:26,725 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
+2022-09-23 10:57:28,090 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 10:57:54,152 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
+2022-09-23 10:57:55,060 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 10:58:58,198 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
+2022-09-23 10:58:59,202 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 10:59:11,815 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
+2022-09-23 10:59:12,998 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 10:59:47,929 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
+2022-09-23 10:59:49,309 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 10:59:57,931 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
+2022-09-23 10:59:59,060 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:00:05,544 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/models.py changed, reloading.
+2022-09-23 11:00:06,955 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:10:27,657 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/signals.py changed, reloading.
+2022-09-23 11:10:28,524 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:11:01,419 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/forms.py changed, reloading.
+2022-09-23 11:11:02,180 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:11:51,241 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/forms.py changed, reloading.
+2022-09-23 11:11:52,654 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:12:16,484 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/forms.py changed, reloading.
+2022-09-23 11:12:17,592 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:12:55,550 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/forms.py changed, reloading.
+2022-09-23 11:12:56,355 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:13:11,127 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/forms.py changed, reloading.
+2022-09-23 11:13:11,990 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:14:50,629 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/filters.py changed, reloading.
+2022-09-23 11:14:51,637 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:15:49,754 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/filters.py changed, reloading.
+2022-09-23 11:15:50,463 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:16:17,108 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/filters.py changed, reloading.
+2022-09-23 11:16:17,859 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:16:36,588 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/filters.py changed, reloading.
+2022-09-23 11:16:37,269 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:17:19,119 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/filters.py changed, reloading.
+2022-09-23 11:17:20,187 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:17:50,997 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/filters.py changed, reloading.
+2022-09-23 11:17:51,959 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:18:10,637 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/filters.py changed, reloading.
+2022-09-23 11:18:11,493 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:18:33,317 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/filters.py changed, reloading.
+2022-09-23 11:18:34,780 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:19:25,012 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/filters.py changed, reloading.
+2022-09-23 11:19:26,035 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:21:41,141 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/admin.py changed, reloading.
+2022-09-23 11:21:42,322 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:23:41,297 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/news/admin.py changed, reloading.
+2022-09-23 11:23:42,055 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:25:44,117 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/sign/models.py changed, reloading.
+2022-09-23 11:25:45,294 INFO autoreload Watching for file changes with StatReloader
+2022-09-23 11:26:19,218 INFO autoreload /home/kiro/NewsPaperLinux/NewsPaper/sign/models.py changed, reloading.
+2022-09-23 11:26:19,876 INFO autoreload Watching for file changes with StatReloader

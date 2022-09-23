@@ -4,7 +4,7 @@
 {% load i18n %}
 
 {% block content %}
-<h2> Войти в систему </h2>
+<h2> {% trans "Sign in" %} </h2>
 <hr>
 <form method="post" action="{% url 'login' %}">
 {% csrf_token %}
@@ -18,8 +18,8 @@
     <td>{{ form.password }}</td>
 </tr>
 </table>
-
-<input type="submit" value="Войти">
+{% trans "Sign In" as trans_var %}
+<input type="submit" value=trans_var>
 </form>
-<button> <a href="/sign/signup"> Регистрация </a></button>
+<button> <a href="/sign/signup"> {% trans "Registration" %} </a></button>
 {% endblock %}
