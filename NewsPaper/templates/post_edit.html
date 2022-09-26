@@ -1,14 +1,16 @@
 {% extends 'flatpages/default.html' %}
 
+{% load i18n %}
+{% load tz %}
 
 {% block content %}
-<h3> Страница создания и редактирования поста </h3>
+<h3> {% trans "On this page you can create and edit a post" %} </h3>
 <hr>
 
 <form align="left" action="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input align="left" type="submit" value="Опубликовать" />
+    <input align="left" type="submit" value={% trans "Publish" %} />
 </form>
 
 {% endblock content %}

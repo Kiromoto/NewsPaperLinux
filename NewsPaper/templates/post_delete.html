@@ -1,15 +1,17 @@
 {% extends 'flatpages/default.html' %}
 
 {% load i18n %}
+{% load tz %}
 
 {% block content %}
-<h3> Страница удаления поста </h3>
+<h3> {% trans "On this page you can delete a post!" %} </h3>
 <hr>
 
 <form style="font-size: 1.2em; text-align: left;" action="" method="post">
     {% csrf_token %}
-    <p>Вы уверены, что хотите удалить пост: "{{ object.post_title }}"? </p>
-    <input align="left" type="submit" value="Я уверен, что хочу УДАЛИТЬ" />
+    <p>{% trans "Are you sure you want to delete the post " %} "{{ object.post_title }}"? </p>
+    {% trans "I'm sure! I want to DELETE" as sure_var %}
+    <input align="left" type="submit" value=sure_var />
 </form>
 
 {% endblock content %}

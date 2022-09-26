@@ -8,8 +8,7 @@ from django.utils.translation import pgettext_lazy
 class Author(models.Model):
     author_user = models.OneToOneField(
         User, on_delete=models.CASCADE,
-        verbose_name=pgettext_lazy('Author name', 'Author name'),
-        help_text=_('Author name')
+        verbose_name=pgettext_lazy('Author name', 'Author name')
     )
     author_rating = models.IntegerField(
         default=0,
@@ -81,21 +80,19 @@ class Post(models.Model):
     ARTICLE = 'AT'
 
     CHOISE_NW_AT = [
-        (NEWS, 'Новость'),
-        (ARTICLE, 'Статья')
+        (NEWS, pgettext_lazy('New', 'New')),
+        (ARTICLE, pgettext_lazy('Artiсle','Artiсle'))
     ]
 
     author = models.ForeignKey(
         Author, on_delete=models.CASCADE,
-        verbose_name=pgettext_lazy('Author name', 'Author name'),
-        help_text=_('Author name')
+        verbose_name=pgettext_lazy('Author name', 'Author name')
     )
     type_of_post = models.CharField(
         max_length=2,
         default=NEWS,
         choices=CHOISE_NW_AT,
-        verbose_name=pgettext_lazy('Post type', 'Post type'),
-        help_text=_('Post type')
+        verbose_name=pgettext_lazy('Post type', 'Post type')
     )
     post_create_datetime = models.DateTimeField(
         auto_now_add=True,
@@ -105,17 +102,14 @@ class Post(models.Model):
     post_category = models.ManyToManyField(
         Category, through='PostCategory',
         related_name='posts',
-        verbose_name=pgettext_lazy('This is category of post', 'Post category'),
-        help_text=_('Post category')
+        verbose_name=pgettext_lazy('This is category of post', 'Post category')
     )
     post_title = models.CharField(
         max_length=128,
-        verbose_name=pgettext_lazy('Post title', 'Post title'),
-        help_text=_('Post title')
+        verbose_name=pgettext_lazy('Post title', 'Post title')
     )
     post_text = models.TextField(
-        verbose_name=pgettext_lazy('The content of the post', 'The content of the post'),
-        help_text=_('The content of the post')
+        verbose_name=pgettext_lazy('The content of the post', 'The content of the post')
     )
     post_rating = models.IntegerField(
         default=0,

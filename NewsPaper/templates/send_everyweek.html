@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 {% load i18n %}
+{% load tz %}
 
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-<h3>Свежие новости за прошедшую неделю:</h3>
+<h3> {% trans "Latest news for the past week:" %}</h3>
 {% for p in ur%}
     {% for key, value in p.items %}
         <p><a href="{{ value }}">{{ key.post_title }}...</a> </p>

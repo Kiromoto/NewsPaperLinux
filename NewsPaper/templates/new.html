@@ -1,6 +1,7 @@
 {% extends 'flatpages/default.html' %}
 
 {% load i18n %}
+{% load tz %}
 {% load custom_filters %}
 
 {% block title %}
@@ -47,11 +48,15 @@
 <table align='left' border="0" cellspacing="0" style="font-size: 1.2em;">
     <tr align="right">
         <form align="center">
+            {% trans "Unsubscribe from" as unsubscribe_var %}
+            {% trans "Subscribe to" as subscribe_var %}
+
             {% for cat in new.post_category.all %}
                 {% if is_subscribe %}
-                    <button> <a href="{% url 'subscr_me' cat.id %}">Отписаться от {{ cat.name }}</a> </button>
+                    <button> <a href="{% url 'subscr_me' cat.id %}">{unsubscribe_var} {{ cat.name }}</a> </button>
             &nbsp;   {% else %}
-                    <button> <a href="{% url 'subscr_me' cat.id %}">{% Unsubscribe from %} {{ cat.name }}</a> </button>                {% endif %}&nbsp;
+                    <button> <a href="{% url 'subscr_me' cat.id %}">{{subscribe_var}} {{ cat.name }}</a> </button>
+                {% endif %}&nbsp;
             {% endfor %}
         </form>
     </tr>

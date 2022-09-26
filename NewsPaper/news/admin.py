@@ -1,6 +1,15 @@
 from django.contrib import admin
 from .models import Author, Category, Post, Comment, PostCategory, CategorySubscriber
 from django.utils.translation import pgettext_lazy
+from modeltranslation.admin import TranslationAdmin
+
+
+class CategoryAdmin(TranslationAdmin):
+    model = Category
+
+
+class PostAdmin(TranslationAdmin):
+    model = Post
 
 
 def nullfy_postrating(modeladmin, request, queryset):
@@ -32,7 +41,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class PostCategoryAdmin(admin.ModelAdmin):
     list_display = ('post_id', 'category_id',)
-    list_filter = ('category_id', )
+    list_filter = ('category_id',)
 
 
 class CommentAdmin(admin.ModelAdmin):

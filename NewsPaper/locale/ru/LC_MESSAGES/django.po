@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-22 03:47+0000\n"
+"POT-Creation-Date: 2022-09-25 03:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,15 +28,382 @@ msgstr "Продвинутые опции"
 msgid "collapse"
 msgstr "свернуть"
 
-#: news/models.py:37
+#: news/admin.py:23
+msgctxt "Reset comment rating"
+msgid "Reset comment rating"
+msgstr "Обнулить рейтинг комментария"
+
+#: news/filters.py:8
+msgctxt "Search in the title"
+msgid "Search in the title of a news or article"
+msgstr "Поиск в заголовке или тексте поста"
+
+#: news/filters.py:9
+msgctxt "Category"
+msgid "Category"
+msgstr "Категория"
+
+#: news/filters.py:9
+msgctxt "All categories"
+msgid "All categories"
+msgstr "Все категории"
+
+#: news/filters.py:11
+msgctxt "Article published after"
+msgid "Article published after"
+msgstr "Пост опубликован после"
+
+#: news/filters.py:14
+msgctxt "Input date format"
+msgid "Enter the date in the format DD.MM.YYYY. Example: 07.27.2022"
+msgstr "Введите дату в формате DD.MM.YYYY. Например: 07.27.2022"
+
+#: news/forms.py:23
+msgctxt "Error message for form"
+msgid "The title and content of the news or article must not match."
+msgstr "Заголовок и содержание статьи не должны совпадать."
+
+#: news/models.py:11 news/models.py:89
+msgctxt "Author name"
+msgid "Author name"
+msgstr "Имя автора"
+
+#: news/models.py:15
+msgctxt "Author rating"
+msgid "Author rating"
+msgstr "Рейтинг автора"
+
+#: news/models.py:16
+msgid "Author rating"
+msgstr "Рейтинг автора"
+
+#: news/models.py:47
+msgctxt "Name of category"
+msgid "Name of category"
+msgstr "Название категории"
+
+#: news/models.py:48 news/models.py:74
 msgid "category name"
 msgstr "Название категории"
 
-#: news/models.py:64
+#: news/models.py:53
+msgctxt "Subscribers"
+msgid "Subscribers"
+msgstr "Подписчики"
+
+#: news/models.py:54
+msgid "subscribers"
+msgstr "подписчики"
+
+#: news/models.py:68
+msgid "subscriber"
+msgstr "подписчик"
+
+#: news/models.py:83
+msgctxt "New"
+msgid "New"
+msgstr "Новость"
+
+#: news/models.py:84
+msgctxt "Artiсle"
+msgid "Artiсle"
+msgstr "Статья"
+
+#: news/models.py:95
+msgctxt "Post type"
+msgid "Post type"
+msgstr "Тип поста"
+
+#: news/models.py:99
+msgctxt "Time and date of publication"
+msgid "Time and date of publication"
+msgstr "Время и дата размещения"
+
+#: news/models.py:100
+msgid "Time and date of publication"
+msgstr "Время и дата размещения"
+
+#: news/models.py:105
 msgctxt "This is category of post"
-msgid "This is category of post"
+msgid "Post category"
 msgstr "Категория поста"
+
+#: news/models.py:109
+msgctxt "Post title"
+msgid "Post title"
+msgstr "Заголовок поста"
+
+#: news/models.py:112
+msgctxt "The content of the post"
+msgid "The content of the post"
+msgstr "Содержание поста"
+
+#: news/models.py:116
+msgctxt "The rating of the post"
+msgid "The rating of the post"
+msgstr "Рейтинг поста"
+
+#: news/models.py:117
+msgid "The rating of the post"
+msgstr "Рейтинг поста"
+
+#: news/models.py:124
+msgid "Is this article new?"
+msgstr "Это новая статья?"
+
+#: news/models.py:160
+msgctxt "Post comments"
+msgid "Post comments"
+msgstr "Комментарии к посту"
+
+#: news/models.py:161
+msgid "Post comments"
+msgstr "Комментарии к посту"
+
+#: news/models.py:165
+msgctxt "The user who commented on the post"
+msgid "The user who commented on the post"
+msgstr "Пользователь оставивший комментарий"
+
+#: news/models.py:166
+msgid "The username who commented on the post"
+msgstr "Имя пользователя оставившего комментарий"
+
+#: news/models.py:168
+msgctxt "Comment text"
+msgid "Comment text"
+msgstr "Тест комментария"
+
+#: news/models.py:171
+msgctxt "Time and date of comment"
+msgid "Time and date of comment"
+msgstr "Время и дата комментария"
+
+#: news/models.py:172
+msgid "Time and date of comment"
+msgstr "Время и дата комментария"
+
+#: news/models.py:176
+msgctxt "The rating of the comment"
+msgid "The rating of the comment"
+msgstr "Рейтинг комментария"
+
+#: news/models.py:177
+msgid "The rating of the comment"
+msgstr "Рейтинг комментария"
+
+#: news/signals.py:27 news/tasks.py:70
+msgid "NewsPaper has a new article in your favorite category"
+msgstr "На сайте NewsPaper появилась новая статья в вашей любимой категории"
+
+#: news/tasks.py:35
+msgid "Здравствуйте,"
+msgstr "Hello,"
+
+#: news/tasks.py:35
+msgid "Here are the most interesting news from the past week on NewsPaper"
+msgstr "Вот самые интересные новости за последнюю неделю с сайта NewsPaper"
+
+#: sign/models.py:8
+msgctxt "Email"
+msgid "Email"
+msgstr "Электронная почта"
+
+#: sign/models.py:9
+msgctxt "Name"
+msgid "Name"
+msgstr "Имя"
+
+#: sign/models.py:10
+msgctxt "Surname"
+msgid "Surname"
+msgstr "Фамилия"
+
+#: templates/flatpages/default.html:22
+msgid "FINAL TASK"
+msgstr "ИТОГОВОЕ ЗАДАНИЕ"
+
+#: templates/flatpages/default.html:37 templates/news.html:17
+msgid "All news"
+msgstr "Все новости"
+
+#: templates/flatpages/default.html:40
+msgid "Search news"
+msgstr "Поиск новостей"
+
+#: templates/flatpages/default.html:43
+msgid "Create new"
+msgstr "Создать пост"
+
+#: templates/flatpages/default.html:46
+msgid "Login/Registration"
+msgstr "Войти/Зарегистрироваться"
+
+#: templates/flatpages/default.html:49 templates/protect/index.html:53
+msgid "Logout"
+msgstr "Выйти"
+
+#: templates/flatpages/default.html:52
+msgid "My account"
+msgstr "Мой аккаунт"
+
+#: templates/flatpages/default.html:56
+msgid "About this site"
+msgstr "О сайте"
+
+#: templates/new.html:16
+msgid "Edit post"
+msgstr "Редактировать пост"
+
+#: templates/new.html:17
+msgid "Delete post"
+msgstr "Удалить пост"
+
+#: templates/new.html:32
+msgid "Categories in the article:"
+msgstr "Категории в статье:"
+
+#: templates/new.html:41
+msgid ""
+"You can subscribe to a category and receive email notifications about new "
+"publications in the selected category! Look for the buttons below."
+msgstr ""
+"Вы можете подписаться на категорию и получать уведомления о новой "
+"публикациив выбранной вами категории. Ищите кнопки ниже."
+
+#: templates/new.html:50
+#, fuzzy
+#| msgid "subscriber"
+msgid "Unsubscribe from"
+msgstr "Отписаться от"
+
+#: templates/new.html:51
+#, fuzzy
+#| msgctxt "Subscribers"
+#| msgid "Subscribers"
+msgid "Subscribe to"
+msgstr "Подписаться на"
+
+#: templates/news.html:16
+msgid "Number of news per page:"
+msgstr "Количество новостей на странице:"
+
+#: templates/news.html:33
+msgid "There are no news on this site!"
+msgstr "На этом сайте нет ни одной новости!"
 
 #: templates/news.html:59
 msgid "Check out my new cool translation"
 msgstr "Оцените мой новый классный перевод"
+
+#: templates/post_delete.html:6
+msgid "On this page you can delete a post!"
+msgstr "На этой странице вы можете удалить пост!"
+
+#: templates/post_delete.html:11
+msgid "Are you sure you want to delete the post "
+msgstr "Вы уверены, что хотите удалить пост "
+
+#: templates/post_delete.html:12
+msgid "I'm sure! I want to DELETE"
+msgstr "Я уверен! Я хочу УДАЛИТЬ"
+
+#: templates/post_edit.html:6
+msgid "On this page you can create and edit a post"
+msgstr "На этой странице вы можете создать и редактировать пост"
+
+#: templates/post_edit.html:12
+msgid "Publish"
+msgstr "Опубиковать"
+
+#: templates/protect/index.html:6
+msgid "Authorized user page"
+msgstr "Страница авторизованного пользователя"
+
+#: templates/protect/index.html:10
+msgid "User login:"
+msgstr "Активный пользователь:"
+
+#: templates/protect/index.html:14
+msgid "Username:"
+msgstr "Имя пользователя:"
+
+#: templates/protect/index.html:18
+msgid "Surname:"
+msgstr "Фамилия:"
+
+#: templates/protect/index.html:22
+msgid "E-mail:"
+msgstr "Электронная почта:"
+
+#: templates/protect/index.html:26
+msgid "Member of groups:"
+msgstr "Состоит в группах:"
+
+#: templates/protect/index.html:34
+msgid "Subscribed to news categories:"
+msgstr "Подписан на категории новостей:"
+
+#: templates/protect/index.html:45
+msgid "This may contain personal information for each user."
+msgstr "Страница содержит персональную информацию пользователя."
+
+#: templates/protect/index.html:48
+msgid "Edit profile"
+msgstr "Редактировать профиль"
+
+#: templates/protect/index.html:57
+msgid "Become an author"
+msgstr "Стать автором"
+
+#: templates/search.html:13
+msgid "Find"
+msgstr "Найти"
+
+#: templates/search.html:18
+msgid "Found news on the page: "
+msgstr "Найдено новостей на странице: "
+
+#: templates/search.html:19
+msgid "News found for your query: "
+msgstr "Найдены новости по вашему запросу: "
+
+#: templates/send_everyweek.html:12
+msgid "Latest news for the past week:"
+msgstr "Свежие новости за последнюю неделю:"
+
+#: templates/sign/login.html:7 templates/sign/signup.html:6
+msgid "Sign in"
+msgstr "Войти"
+
+#: templates/sign/login.html:21
+msgid "Sign In"
+msgstr "Войти"
+
+#: templates/sign/login.html:24
+msgid "Registration"
+msgstr "Регистрация"
+
+#: templates/sign/logout.html:6
+msgid "You are logged out"
+msgstr "Вы вышли"
+
+#: templates/sign/signup.html:10
+msgid "Continue"
+msgstr "Продолжить"
+
+#: templates/subscribes.html:6
+msgid "On this page, information about a successful subscription"
+msgstr "Эта страница успешной подписки на категорию"
+
+#: templates/subscribes.html:9
+msgid "You are subscribed to the category: "
+msgstr "Вы подписаны на категорию: "
+
+#: templates/user_edit.html:6
+msgid "User profile edit page"
+msgstr "Страница редактирования профиля пользователя"
+
+#: templates/user_edit.html:12
+msgid "Save changes"
+msgstr "Сохранить изменения"

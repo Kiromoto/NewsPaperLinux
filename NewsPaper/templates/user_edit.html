@@ -1,15 +1,17 @@
 {% extends 'flatpages/default.html' %}
 
 {% load i18n %}
+{% load tz %}
 
 {% block content %}
-<h3> Страница редактирования профиля пользователя </h3>
+<h3> {% trans "User profile edit page" %}} </h3>
 <hr>
 
 <form align="left" action="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input align="left" type="submit" value="Сохранить" />
+    {% trans "Save changes" as save_var %}
+    <input align="left" type="submit" value=save_var />
 </form>
 
 {% endblock content %}

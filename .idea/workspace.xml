@@ -2,19 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="958a852c-66ed-46cf-abc7-647f7b14103e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/NewsPaper/basic/middlewares.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/7c8151d1983380c42f4eea02f20d2231.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/8cce1f5a7ea89b14d657e8f7e6989edd.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/903152fae591f9b4d9707d721a019750.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/c837518d575b277be39a45aff135eea7.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/news/migrations/0006_category_name_en_category_name_ru_post_post_text_en_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/news/translation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/NewsPaper/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/NewsPaper/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/13cafc2b1ced524805126c9e0d9ed7dd.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/13cafc2b1ced524805126c9e0d9ed7dd.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/38b348c7af7ef9bf492caa2ab2aa0489.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/38b348c7af7ef9bf492caa2ab2aa0489.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/42969131e8132fb2273b708a9ea82e7c.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/42969131e8132fb2273b708a9ea82e7c.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/5553f98e26a3fb1b3d65ea8cf9463deb.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/5553f98e26a3fb1b3d65ea8cf9463deb.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/68cd758e9df58c3ddca6169005f40c26.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/68cd758e9df58c3ddca6169005f40c26.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/6d92c3ffdb4256ff600855bb80ee70c5.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/6d92c3ffdb4256ff600855bb80ee70c5.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/76111e02ad036d6fa32f8faafeee0087.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/76111e02ad036d6fa32f8faafeee0087.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/8eee597e53a378f03b1e0eb3fe6995a0.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/8eee597e53a378f03b1e0eb3fe6995a0.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/b50aacf0d266d36d3b688c33a2b31891.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/b50aacf0d266d36d3b688c33a2b31891.djcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/cache_files/f7388406b5468d2c10feaae491ccbb60.djcache" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/cache_files/f7388406b5468d2c10feaae491ccbb60.djcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/errors.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/general.log" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/general.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/locale/ru/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/locale/ru/LC_MESSAGES/django.mo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/locale/ru/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/locale/ru/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/news/migrations/0005_post_is_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/migrations/0005_post_is_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/news/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewsPaper/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/news/templatetags/custom_filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/templatetags/custom_filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/flatpages/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/flatpages/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/post_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/post_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/post_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/post_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/post_emailsend.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/post_emailsend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/send_everyweek.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/send_everyweek.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/subscribes.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/subscribes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/user_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/user_edit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +70,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu-20.04/home/kiro/NewsPaperLinux&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/kiro/code/NewsPaperLinux",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\kiro\code\NewsPaperLinux\NewsPaper" />
@@ -65,12 +89,34 @@
       <recent name="C:\CODE\code_python\NewsPaper\NewsPaper\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\kiro\code\NewsPaperLinux\NewsPaper\basic" />
       <recent name="C:\CODE\code_python\NewsPaper" />
       <recent name="C:\CODE\code_python\NewsPaper\NewsPaper\NewsPaper\templates" />
       <recent name="C:\CODE\code_python\NewsPaper\NewsPaper\NewsPaper" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.CODEWARS">
+    <configuration name="CODEWARS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="NewsPaper" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NewsPaper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NewsPaper/CODEWARS.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="urls" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NewsPaper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,6 +140,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.CODEWARS" />
         <item itemvalue="Python.urls" />
       </list>
     </recent_temporary>

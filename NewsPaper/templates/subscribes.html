@@ -1,11 +1,12 @@
 {% extends 'flatpages/default.html' %}
 
 {% load i18n %}
+{% load tz %}
 
 {% block content %}
-<h3> Страница подписки </h3>
+<h3> {% trans "On this page, information about a successful subscription" %} </h3>
 <hr>
 
-    <p>Вы подписаны на категорию "{{ object.category.1 }}"? </p>
+    <p>{% trans "You are subscribed to the category: " %} "{{ object.category.1 }}"? </p>
 
 {% endblock content %}

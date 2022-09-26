@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 {% load i18n %}
+{% load tz %}
 
 <html lang="en">
 <head>
@@ -19,7 +20,7 @@
 <!-- Responsive navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-        <a class="navbar-brand" href="">ИТОГОВОЕ ЗАДАНИЕ D14.4</a>
+        <a class="navbar-brand" href="">{% trans "FINAL TASK" %} D14.4</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false"
@@ -34,23 +35,28 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/accounts/login/">Вход / Регистрация</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/news/">Все новости</a>
+                    <a class="nav-link" href="/news/">{% trans "All news" %}</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="/news/search/">Поиск новостей</a>
+                    <a class="nav-link" href="/news/search/">{% trans "Search news" %}</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="/news/create/">Создать пост</a>
+                    <a class="nav-link" href="/news/create/">{% trans "Create new" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about/">О сайте</a>
+                    <a class="nav-link" href="/accounts/login/">{% trans "Login/Registration" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/accounts/logout/">Выйти</a>
+                    <a class="nav-link" href="/accounts/logout/">{% trans "Logout" %}</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">{% trans "My account" %}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">{% trans "About this site" %}</a>
+                </li>
+                <li class="nav-item">
             </ul>
         </div>
     </div>
@@ -75,7 +81,20 @@
         <input type="submit" value="set">
     </form>
 
+    {% get_current_timezone as TIME_ZONE %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="timezone">Time zone:</label>
+        <select name="timezone">
+            {% for tz in timezones %}
+            <option value="{{ tz }}"{% if tz == TIME_ZONE %} selected{% endif %}>{{ tz }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Set">
+    </form>
 
+    {{ TIME_ZONE }}
+    {{ current_time|timezone:TIME_ZONE }} <!-- Отображаем время в выбранном часовом поясе  -->
 <!-- Page content-->
 <div class="container">
     <div class="row">

@@ -5,12 +5,39 @@ from .filters import PostFilter
 from .forms import PostForm
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.core.cache import cache
+
+from django.views import View
+from django.http.response import HttpResponse
+from django.utils.translation import gettext as _
+from django.utils.translation import activate, get_supported_language_variant
+
+from django.utils import timezone
+import pytz
+
 import logging
 
 logger = logging.getLogger(__name__)
+
+class Index(View):
+    def get(self, request):
+        curent_time = timezone.now()
+
+        postml = Post.objects.all()
+        categoryml = Category.objects.all()
+
+        context = {
+            'postml': postml,
+            'categoryml': categoryml,
+            'current_time': timezone.now(),
+            'timezones': pytz.common_timezones,
+        }
+        return HttpResponse(render(request, 'default.html', context))
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('news/')
 
 
 class PostList(ListView):
@@ -35,15 +62,19 @@ class PostDetail(DetailView):
 
         return obj
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     id = self.kwargs.get('pk')
-    #     # context['is_subscribe'] = True
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        id = self.kwargs.get('pk')
+        print(Post.objects.get(pk=id).post_title)
+        print(self.request.user.username, self.request.user.id)
+
+        context['is_subscribe'] = False
     #     # print(Post.objects.get(id=id).post_title)
-    # #     qwe = Category.objects.filter(pk=Post.objects.get(pk=id).post_category.id).values('subscriber__username')
-    # #     context['is_not_subscribe'] = not qwe.filter(subscriber__username=self.request.user).exists()
-    # #     context['is_subscribe'] = qwe.filter(subscriber__username=self.request.user).exists()
-    #     return context
+    #     qwe = Category.objects.filter(pk=Post.objects.get(pk=id).post_category.id).values('subscriber__username')
+    #     print(qwe)
+    #     context['is_not_subscribe'] = not qwe.filter(subscriber__username=self.request.user).exists()
+    #     context['is_subscribe'] = qwe.filter(subscriber__username=self.request.user).exists()
+        return context
 
 
 # def add_subscribe(request, **kwargs):
