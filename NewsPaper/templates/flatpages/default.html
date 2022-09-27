@@ -10,7 +10,10 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <title>{% block title %} {{ flatpage.title }} {% endblock title %}</title>
-
+<!--    <style>-->
+<!--        body {background-color: {% if current_time.hour >= 21 or current_time.hour <= 7 %} darkcyan {% else %} powderblue {% endif %};}-->
+<!--    </style>-->
+<!--        {{ current_time.month }}-->
     {% load static %}
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{% static 'css/styles.css' %}" rel="stylesheet"/>
@@ -92,9 +95,11 @@
         </select>
         <input type="submit" value="Set">
     </form>
-
     {{ TIME_ZONE }}
     {{ current_time|timezone:TIME_ZONE }} <!-- Отображаем время в выбранном часовом поясе  -->
+<!--    {{ current_time }} &lt;!&ndash; Отображаем время в выбранном часовом поясе  &ndash;&gt;-->
+<!--<p>{{current_time.hour}}:{{current_time.minute}}:{{current_time.second}}</p>-->
+
 <!-- Page content-->
 <div class="container">
     <div class="row">

@@ -20,24 +20,21 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-class Index(View):
-    def get(self, request):
-        curent_time = timezone.now()
-
-        postml = Post.objects.all()
-        categoryml = Category.objects.all()
-
-        context = {
-            'postml': postml,
-            'categoryml': categoryml,
-            'current_time': timezone.now(),
-            'timezones': pytz.common_timezones,
-        }
-        return HttpResponse(render(request, 'default.html', context))
-
-    def post(self, request):
-        request.session['django_timezone'] = request.POST['timezone']
-        return redirect('news/')
+# class Index(View):
+#     def get(self, request):
+#         current_time = timezone.now()
+#         print(current_time)
+#         print(pytz.common_timezones)
+#
+#         context = {
+#             'current_time': current_time,
+#             'timezones': pytz.common_timezones,
+#         }
+#         return HttpResponse(render(request, 'default.html', context))
+#
+#     def post(self, request):
+#         request.session['django_timezone'] = request.POST['timezone']
+#         return redirect('news/')
 
 
 class PostList(ListView):
@@ -46,6 +43,22 @@ class PostList(ListView):
     template_name = 'news.html'
     context_object_name = 'news'
     paginate_by = 10
+
+    def get(self, request):
+        current_time = timezone.now()
+        print(current_time)
+        print(timezone.get_current_timezone())
+
+        context = {
+            'current_time': current_time,
+            'timezones': pytz.common_timezones,
+        }
+        return HttpResponse(render(request, 'news.html', context))
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('http://127.0.0.1:8000/news/')
+
 
 
 class PostDetail(DetailView):

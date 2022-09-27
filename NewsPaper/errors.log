@@ -1502,3 +1502,221 @@ Traceback (most recent call last):
     print(Post.objects.get(pk=id).title)
 AttributeError: 'Post' object has no attribute 'title'
 2022-09-25 03:35:09,116 ERROR "GET /news/12 HTTP/1.1" 500 84832 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-27 00:52:28,134 ERROR Internal Server Error: /news/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('default.html'), <traceback object at 0x7ffbd4957c80>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py", line 56, in get
+    return HttpResponse(render(request, 'default.html', context))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: default.html
+2022-09-27 00:52:28,135 ERROR "GET /news/ HTTP/1.1" 500 110693 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-27 01:05:16,230 ERROR Internal Server Error: /news/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Could not parse the remainder: ' : current_time.second' from 'current_time.minute : current_time.second'"), <traceback object at 0x7f95baf24c00>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py", line 56, in get
+    return HttpResponse(render(request, 'news.html', context))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/engine.py", line 158, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 484, in parse
+    raise self.error(token, e)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 701, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' : current_time.second' from 'current_time.minute : current_time.second'
+2022-09-27 01:05:16,231 ERROR "GET /news/ HTTP/1.1" 500 267746 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-27 01:05:29,289 ERROR Internal Server Error: /news/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Could not parse the remainder: ' current_time.second' from 'current_time.minute current_time.second'"), <traceback object at 0x7f95b9d61240>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py", line 56, in get
+    return HttpResponse(render(request, 'news.html', context))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/engine.py", line 158, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 484, in parse
+    raise self.error(token, e)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 701, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' current_time.second' from 'current_time.minute current_time.second'
+2022-09-27 01:05:29,289 ERROR "GET /news/ HTTP/1.1" 500 267712 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-27 01:16:40,282 ERROR Internal Server Error: /news/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'Europe/London' object has no attribute 'hour'"), <traceback object at 0x7f941ab8f2c0>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py", line 52, in get
+    print(a.hour)
+AttributeError: 'Europe/London' object has no attribute 'hour'
+2022-09-27 01:16:40,282 ERROR "GET /news/ HTTP/1.1" 500 79848 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-27 01:17:58,731 ERROR Internal Server Error: /news/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'Europe/London' object has no attribute 'hour'"), <traceback object at 0x7f941ac67100>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py", line 52, in get
+    print(a.hour)
+AttributeError: 'Europe/London' object has no attribute 'hour'
+2022-09-27 01:17:58,731 ERROR "GET /news/ HTTP/1.1" 500 79692 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-27 01:21:50,228 ERROR Internal Server Error: /news/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError('timezone requires 2 arguments, 1 provided'), <traceback object at 0x7f289ae64f40>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py", line 56, in get
+    return HttpResponse(render(request, 'news.html', context))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/engine.py", line 158, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 484, in parse
+    raise self.error(token, e)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 697, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 758, in args_check
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: timezone requires 2 arguments, 1 provided
+2022-09-27 01:21:50,229 ERROR "GET /news/ HTTP/1.1" 500 275435 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
