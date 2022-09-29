@@ -1720,3 +1720,165 @@ Traceback (most recent call last):
     raise TemplateSyntaxError(
 django.template.exceptions.TemplateSyntaxError: timezone requires 2 arguments, 1 provided
 2022-09-27 01:21:50,229 ERROR "GET /news/ HTTP/1.1" 500 275435 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-29 03:11:00,500 ERROR Internal Server Error: /news/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'NameError'>, NameError("name 'context' is not defined"), <traceback object at 0x7efc4bd50400>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py", line 58, in get
+    return HttpResponse(render(request, 'news.html', context))
+NameError: name 'context' is not defined
+2022-09-29 03:11:00,501 ERROR "GET /news/ HTTP/1.1" 500 79363 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-29 03:22:56,934 ERROR Internal Server Error: /news/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'ImportError'>, ImportError('Module "news.context_processors" does not define a "navigate_context" attribute/class'), <traceback object at 0x7f53deef0ac0>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 16, in cached_import
+    return getattr(modules[module_path], class_name)
+AttributeError: module 'news.context_processors' has no attribute 'navigate_context'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py", line 58, in get
+    return HttpResponse(render(request, 'news.html', context))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    with context.bind_template(self):
+  File "/usr/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/context.py", line 251, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/engine.py", line 117, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/engine.py", line 117, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 32, in import_string
+    raise ImportError(
+ImportError: Module "news.context_processors" does not define a "navigate_context" attribute/class
+2022-09-29 03:22:56,935 ERROR "GET /news/ HTTP/1.1" 500 173515 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-29 03:24:08,615 ERROR Internal Server Error: /news/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'IndentationError'>, IndentationError('unindent does not match any outer indentation level', ('/home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py', 37, 19, '    return context', 37, -1)), <traceback object at 0x7ff3ac44cd00>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py", line 58, in get
+    return HttpResponse(render(request, 'news.html', context))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    with context.bind_template(self):
+  File "/usr/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/context.py", line 251, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/engine.py", line 117, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/engine.py", line 117, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    import_module(module_path)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py", line 37
+    return context
+                  ^
+IndentationError: unindent does not match any outer indentation level
+2022-09-29 03:24:08,616 ERROR "GET /news/ HTTP/1.1" 500 195957 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-09-29 03:24:56,855 ERROR Internal Server Error: /news/ /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'IndentationError'>, IndentationError('unexpected indent', ('/home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py', 39, 8, '        context = {\n', 39, -1)), <traceback object at 0x7ff3ad9d3c00>)
+Traceback (most recent call last):
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py", line 58, in get
+    return HttpResponse(render(request, 'news.html', context))
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    with context.bind_template(self):
+  File "/usr/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/context.py", line 251, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/engine.py", line 117, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/template/engine.py", line 117, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    import_module(module_path)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py", line 39
+    context = {
+IndentationError: unexpected indent
+2022-09-29 03:24:56,855 ERROR "GET /news/ HTTP/1.1" 500 196143 /home/kiro/code/NewsPaperLinux/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None

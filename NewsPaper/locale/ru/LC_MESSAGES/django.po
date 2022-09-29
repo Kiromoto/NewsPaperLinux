@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-25 03:56+0000\n"
+"POT-Creation-Date: 2022-09-29 02:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -219,51 +219,51 @@ msgctxt "Surname"
 msgid "Surname"
 msgstr "Фамилия"
 
-#: templates/flatpages/default.html:22
+#: templates/flatpages/default.html:26
 msgid "FINAL TASK"
 msgstr "ИТОГОВОЕ ЗАДАНИЕ"
 
-#: templates/flatpages/default.html:37 templates/news.html:17
+#: templates/flatpages/default.html:41 templates/news.html:24
 msgid "All news"
 msgstr "Все новости"
 
-#: templates/flatpages/default.html:40
+#: templates/flatpages/default.html:44
 msgid "Search news"
 msgstr "Поиск новостей"
 
-#: templates/flatpages/default.html:43
+#: templates/flatpages/default.html:47
 msgid "Create new"
 msgstr "Создать пост"
 
-#: templates/flatpages/default.html:46
+#: templates/flatpages/default.html:50
 msgid "Login/Registration"
 msgstr "Войти/Зарегистрироваться"
 
-#: templates/flatpages/default.html:49 templates/protect/index.html:53
+#: templates/flatpages/default.html:53 templates/protect/index.html:53
 msgid "Logout"
 msgstr "Выйти"
 
-#: templates/flatpages/default.html:52
+#: templates/flatpages/default.html:56
 msgid "My account"
 msgstr "Мой аккаунт"
 
-#: templates/flatpages/default.html:56
+#: templates/flatpages/default.html:60
 msgid "About this site"
 msgstr "О сайте"
 
-#: templates/new.html:16
+#: templates/new.html:17
 msgid "Edit post"
 msgstr "Редактировать пост"
 
-#: templates/new.html:17
+#: templates/new.html:18
 msgid "Delete post"
 msgstr "Удалить пост"
 
-#: templates/new.html:32
+#: templates/new.html:33
 msgid "Categories in the article:"
 msgstr "Категории в статье:"
 
-#: templates/new.html:41
+#: templates/new.html:42
 msgid ""
 "You can subscribe to a category and receive email notifications about new "
 "publications in the selected category! Look for the buttons below."
@@ -271,48 +271,48 @@ msgstr ""
 "Вы можете подписаться на категорию и получать уведомления о новой "
 "публикациив выбранной вами категории. Ищите кнопки ниже."
 
-#: templates/new.html:50
+#: templates/new.html:51
 #, fuzzy
 #| msgid "subscriber"
 msgid "Unsubscribe from"
 msgstr "Отписаться от"
 
-#: templates/new.html:51
+#: templates/new.html:52
 #, fuzzy
 #| msgctxt "Subscribers"
 #| msgid "Subscribers"
 msgid "Subscribe to"
 msgstr "Подписаться на"
 
-#: templates/news.html:16
+#: templates/news.html:23
 msgid "Number of news per page:"
 msgstr "Количество новостей на странице:"
 
-#: templates/news.html:33
+#: templates/news.html:40
 msgid "There are no news on this site!"
 msgstr "На этом сайте нет ни одной новости!"
 
-#: templates/news.html:59
+#: templates/news.html:66
 msgid "Check out my new cool translation"
 msgstr "Оцените мой новый классный перевод"
 
-#: templates/post_delete.html:6
+#: templates/post_delete.html:7
 msgid "On this page you can delete a post!"
 msgstr "На этой странице вы можете удалить пост!"
 
-#: templates/post_delete.html:11
+#: templates/post_delete.html:12
 msgid "Are you sure you want to delete the post "
 msgstr "Вы уверены, что хотите удалить пост "
 
-#: templates/post_delete.html:12
+#: templates/post_delete.html:13
 msgid "I'm sure! I want to DELETE"
 msgstr "Я уверен! Я хочу УДАЛИТЬ"
 
-#: templates/post_edit.html:6
+#: templates/post_edit.html:7
 msgid "On this page you can create and edit a post"
 msgstr "На этой странице вы можете создать и редактировать пост"
 
-#: templates/post_edit.html:12
+#: templates/post_edit.html:13
 msgid "Publish"
 msgstr "Опубиковать"
 
@@ -356,19 +356,19 @@ msgstr "Редактировать профиль"
 msgid "Become an author"
 msgstr "Стать автором"
 
-#: templates/search.html:13
+#: templates/search.html:14
 msgid "Find"
 msgstr "Найти"
 
-#: templates/search.html:18
+#: templates/search.html:19
 msgid "Found news on the page: "
 msgstr "Найдено новостей на странице: "
 
-#: templates/search.html:19
+#: templates/search.html:20
 msgid "News found for your query: "
 msgstr "Найдены новости по вашему запросу: "
 
-#: templates/send_everyweek.html:12
+#: templates/send_everyweek.html:13
 msgid "Latest news for the past week:"
 msgstr "Свежие новости за последнюю неделю:"
 
@@ -392,18 +392,30 @@ msgstr "Вы вышли"
 msgid "Continue"
 msgstr "Продолжить"
 
-#: templates/subscribes.html:6
+#: templates/subscribes.html:7
 msgid "On this page, information about a successful subscription"
 msgstr "Эта страница успешной подписки на категорию"
 
-#: templates/subscribes.html:9
+#: templates/subscribes.html:10
 msgid "You are subscribed to the category: "
 msgstr "Вы подписаны на категорию: "
 
-#: templates/user_edit.html:6
+#: templates/user_edit.html:7
 msgid "User profile edit page"
 msgstr "Страница редактирования профиля пользователя"
 
-#: templates/user_edit.html:12
+#: templates/user_edit.html:13
 msgid "Save changes"
 msgstr "Сохранить изменения"
+
+#~ msgid ""
+#~ "Information about the site will be posted here in the future.The "
+#~ "information on this page is available only to registered and authorized "
+#~ "users."
+#~ msgstr ""
+#~ "Здесь в будущем будет размещена информация о сайте.Информация на этой "
+#~ "странице доступна только зарегистрированным и авторизованным "
+#~ "пользователям."
+
+#~ msgid "About the site"
+#~ msgstr "О сайте"

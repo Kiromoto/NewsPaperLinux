@@ -48,10 +48,12 @@ class PostList(ListView):
         current_time = timezone.now()
         print(current_time)
         print(timezone.get_current_timezone())
+        news = Post.objects.all()
 
         context = {
             'current_time': current_time,
             'timezones': pytz.common_timezones,
+            'news': news,
         }
         return HttpResponse(render(request, 'news.html', context))
 
