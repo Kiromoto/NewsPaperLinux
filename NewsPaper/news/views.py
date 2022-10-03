@@ -14,7 +14,9 @@ from django.utils.translation import gettext as _
 from django.utils.translation import activate, get_supported_language_variant
 
 from django.utils import timezone
+from datetime import datetime
 import pytz
+
 
 import logging
 
@@ -45,11 +47,13 @@ class PostList(ListView):
     paginate_by = 10
 
     def get(self, request):
-        current_time = timezone.now()
-        print(current_time)
-        print(timezone.get_current_timezone())
-        news = Post.objects.all()
+        current_time = timezone.now()+timezone.timedelta(hours=3)
+        print(f'Текущее время текущей таймзоны: {current_time}')
 
+        # ctz = pytz.get_current_timezone
+        # print(f'Текущая тайм зона: {ctz}')
+
+        news = Post.objects.all()
         context = {
             'current_time': current_time,
             'timezones': pytz.common_timezones,
