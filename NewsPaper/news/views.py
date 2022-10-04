@@ -50,13 +50,10 @@ class PostList(ListView):
         current_time = timezone.now()+timezone.timedelta(hours=3)
         print(f'Текущее время текущей таймзоны: {current_time}')
 
-        # ctz = pytz.get_current_timezone
-        # print(f'Текущая тайм зона: {ctz}')
-
         news = Post.objects.all()
         context = {
-            'current_time': current_time,
-            'timezones': pytz.common_timezones,
+            # 'current_time': current_time,
+            # 'timezones': pytz.common_timezones,
             'news': news,
         }
         return HttpResponse(render(request, 'news.html', context))
@@ -84,8 +81,8 @@ class PostDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         id = self.kwargs.get('pk')
-        print(Post.objects.get(pk=id).post_title)
-        print(self.request.user.username, self.request.user.id)
+        print(Post.objects.get(pk=id).post_title) #Это выводится в консоль при открытии отдельной новости
+        print(self.request.user.username, self.request.user.id) #Это выводится в консоль при открытии отдельной новости
 
         context['is_subscribe'] = False
     #     # print(Post.objects.get(id=id).post_title)

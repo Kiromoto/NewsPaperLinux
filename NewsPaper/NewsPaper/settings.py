@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import django.middleware.locale
+from django.utils import timezone
+from datetime import datetime
 from dotenv import load_dotenv
 
 import os
@@ -171,7 +173,6 @@ LANGUAGES = [
 ]
 
 TIME_ZONE = 'UTC'
-# TIME_ZONE = datetime.timezone(datetime.timedelta(hours=3))
 
 USE_I18N = True
 USE_L10N = True

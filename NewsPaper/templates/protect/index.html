@@ -2,6 +2,8 @@
 
 {% load i18n %}
 
+{% load tz %}
+
 {% block content %}
 <h2 align="center">{% trans "Authorized user page" %}</h2>
 
@@ -58,6 +60,8 @@
         <button> <a href="sign/upgrade/">{{ author_var }}</a> </button>
     {% endif %}
 </form>
+
+{{current_time}}
 
 {% endblock %}
 

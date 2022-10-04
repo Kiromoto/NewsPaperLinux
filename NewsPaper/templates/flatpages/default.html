@@ -10,13 +10,16 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <title>{% block title %} {{ flatpage.title }} {% endblock title %}</title>
-<!--    <style>-->
-<!--        body {background-color: {% if current_time.hour >= 21 or current_time.hour <= 7 %} darkcyan {% else %} powderblue {% endif %};}-->
-<!--    </style>-->
-<!--        {{ current_time.month }}-->
+
     {% load static %}
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{% static 'css/styles.css' %}" rel="stylesheet"/>
+
+        <!-- Если сейчас больше чем 19 или же меньше 7, то выводим тёмную тему, иначе выводим светлую -->
+    <style>
+        body {background-color: {% if current_time.hour >= 19 or current_time.hour <= 4 %} Tan {% else %} Ivory {% endif %};}
+    </style>
+
 </head>
 <body>
 
@@ -95,10 +98,12 @@
         </select>
         <input type="submit" value="Set">
     </form>
-    {{ TIME_ZONE }}
-    {{ current_time|timezone:TIME_ZONE }} <!-- Отображаем время в выбранном часовом поясе  -->
-<!--    {{ current_time }} &lt;!&ndash; Отображаем время в выбранном часовом поясе  &ndash;&gt;-->
-<!--<p>{{current_time.hour}}:{{current_time.minute}}:{{current_time.second}}</p>-->
+    {{ TIME_ZONE }} {{ current_time|timezone:TIME_ZONE }} <!-- Отображаем время в выбранном часовом поясе  -->
+
+    {{ current_time }} <!-- Отображаем время в выбранном часовом поясе  -->
+<!--<p>{{current_time|timezone:TIME_ZONE}}:{{current_time.second|timezone:TIME_ZONE}}</p>-->
+
+<!--&lt;!&ndash;<h2> {{ news.1.post_text }}</h2>&ndash;&gt; Это передано из context_processors.py-->
 
 <!-- Page content-->
 <div class="container">

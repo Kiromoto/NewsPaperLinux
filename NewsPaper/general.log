@@ -395,3 +395,58 @@
 2022-10-03 04:32:44,392 INFO autoreload Watching for file changes with StatReloader
 2022-10-03 04:33:13,054 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py changed, reloading.
 2022-10-03 04:33:13,359 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 03:53:40,088 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 03:54:15,772 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/NewsPaper/settings.py changed, reloading.
+2022-10-04 03:59:35,333 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:01:40,451 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py changed, reloading.
+2022-10-04 04:01:40,771 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:10:55,444 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 04:10:55,751 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:16:15,675 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 04:16:15,958 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:22:26,795 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 04:22:27,074 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:26:00,551 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 04:26:00,835 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:28:03,825 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py changed, reloading.
+2022-10-04 04:28:04,145 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:28:12,469 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py changed, reloading.
+2022-10-04 04:28:12,775 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:53:06,980 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py changed, reloading.
+2022-10-04 04:53:07,320 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:54:51,155 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py changed, reloading.
+2022-10-04 04:54:51,463 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:55:46,559 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py changed, reloading.
+2022-10-04 04:55:46,908 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:56:43,094 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py changed, reloading.
+2022-10-04 04:56:43,399 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:57:22,239 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py changed, reloading.
+2022-10-04 04:57:22,575 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 04:57:27,825 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/views.py changed, reloading.
+2022-10-04 04:57:28,130 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:04:47,980 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:04:48,294 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:05:28,102 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:05:28,405 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:06:27,507 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:06:27,805 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:06:43,246 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:06:43,617 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:07:00,072 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:07:00,378 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:07:58,498 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:07:58,790 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:08:21,269 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:08:21,583 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:08:45,080 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:08:45,411 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:08:56,769 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:08:57,086 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:09:03,380 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:09:03,744 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:09:13,081 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:09:13,386 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:10:53,091 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:10:53,369 INFO autoreload Watching for file changes with StatReloader
+2022-10-04 05:11:41,315 INFO autoreload /home/kiro/code/NewsPaperLinux/NewsPaper/news/context_processors.py changed, reloading.
+2022-10-04 05:11:41,585 INFO autoreload Watching for file changes with StatReloader

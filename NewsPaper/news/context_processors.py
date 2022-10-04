@@ -1,21 +1,28 @@
-# from datetime import datetime
-# import zoneinfo
+from datetime import datetime
+import zoneinfo
 #
 # import pytz
 #
-# from django.conf import settings
+from django.conf import settings
 # from django.db.models import Count
 # from django.db.models.functions import ExtractYear, ExtractMonth
-# from django.utils import timezone
-#
-# from .models import Category, Post
-#
-#
+from django.utils import timezone
+import pytz
+
+from .models import Category, Post
+
+
 def navigate_context(request):
+    current_time = timezone.datetime.now().astimezone()  # + timezone.timedelta(hours=3)
+    print(f'Текущее время текущей таймзоны из context_processors.py: {current_time}')
+    news = Post.objects.all()
+
     context = {
-        'n': 'nnnnnnn',
+        'current_time': current_time,
+        'timezones': pytz.common_timezones,
+        'news': news,
     }
-#
+    #
     return context
 
 #     """Контекст для блоков повторяющихся на всех страницах"""
