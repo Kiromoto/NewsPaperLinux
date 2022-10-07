@@ -13,12 +13,15 @@ from .models import Category, Post
 
 
 def navigate_context(request):
-    current_time = timezone.datetime.now().astimezone()  # + timezone.timedelta(hours=3)
-    print(f'Текущее время текущей таймзоны из context_processors.py: {current_time}')
+    current_time = timezone.datetime.now().astimezone() #+ timezone.timedelta(hours=3)
+    # print(f'Текущее время текущей таймзоны из context_processors.py: {current_time}')
+    c_t_h = (timezone.datetime.now().astimezone() + timezone.timedelta(hours=3)).hour
+    # print(f'HOUR: {c_t_h}')
     news = Post.objects.all()
 
     context = {
         'current_time': current_time,
+        'c_t_h': c_t_h,
         'timezones': pytz.common_timezones,
         'news': news,
     }

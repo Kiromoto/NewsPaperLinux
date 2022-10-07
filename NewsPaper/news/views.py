@@ -22,22 +22,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# class Index(View):
-#     def get(self, request):
-#         current_time = timezone.now()
-#         print(current_time)
-#         print(pytz.common_timezones)
-#
-#         context = {
-#             'current_time': current_time,
-#             'timezones': pytz.common_timezones,
-#         }
-#         return HttpResponse(render(request, 'default.html', context))
-#
-#     def post(self, request):
-#         request.session['django_timezone'] = request.POST['timezone']
-#         return redirect('news/')
-
 
 class PostList(ListView):
     model = Post
@@ -47,12 +31,8 @@ class PostList(ListView):
     paginate_by = 10
 
     def get(self, request):
-        current_time = timezone.now()+timezone.timedelta(hours=3)
-        print(f'Текущее время текущей таймзоны: {current_time}')
-
         news = Post.objects.all()
         context = {
-            # 'current_time': current_time,
             # 'timezones': pytz.common_timezones,
             'news': news,
         }
